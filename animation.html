@@ -1,0 +1,36 @@
+<html>
+	<head>
+    <link REL="stylesheet" HREF="./animation.css" />
+    <title>jQuery Animation</title>
+</head>
+
+<body>
+    <p> Use the arrow keys to move the dog.</p>
+    <img id="dog" src="https://i0.wp.com/freepngimages.com/wp-content/uploads/2020/03/spaniel-1.png?fit=800%2C800" alt="dog">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+       $(document).ready(() => {
+    $(document).keydown(function (keyPressed) {
+        if (keyPressed.keyCode == 39) {
+            $("#dog").animate({
+                left: "+=150px"
+            }, 200);
+        } else if (keyPressed.keyCode == 37) {
+            $("#dog").animate({
+                left: "-=150px",
+            }, 200);
+        } else if (keyPressed.keyCode == 38) {
+            $("#dog").animate({
+                bottom: "+=150px"
+            }, 200);
+        } else if (keyPressed.keyCode == 40) {
+            $("#dog").animate({
+                bottom: "-=150px"
+            }, 200);
+        }
+    });
+});
+
+    </script>
+    <script src="./animation.js"></script>
+</body></html>
