@@ -18,4 +18,18 @@ $(document).ready(() => {
             }, 200);
         }
     });
+
+    let $dog = $("#dog");
+    $dog.on({
+        mouseenter: () => {
+            $("#dog").animate({
+                width: "+=20%"
+            }, 200);
+        },
+        mouseleave: () => {
+            $("#dog").animate({
+                width: "-=20%"
+            }, 200);
+        }
+    });
 });
